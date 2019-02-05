@@ -27,7 +27,9 @@ public class RestAPI
 		 String instanceConnectionName = "digisense222311:asia-south1:psql-dev-db";
 		 String username = "postgres";
 		 String password = "mJHkgFHBgoghLkwj";
-		 String url = "jdbc:postgresql://35.244.6.127:5432/digisense-dev";
+		 String url = "jdbc:postgresql://"+System.getenv("dbip")+":5432/digisense-dev";
+		 
+		 System.out.println("Connecting ::: "+url);
 		 
 		 Connection connection = DriverManager.getConnection(url, username, password);
 
