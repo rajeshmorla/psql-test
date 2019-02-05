@@ -43,12 +43,13 @@ public class RestAPI
 		
 		    
 		return new Gson().toJson(tables);
+	}	
+	
+	@RequestMapping("/display")
+	public static String display()
+	{
+		return "Hello Rajesh!";
 	}
-	
-	
-	
-	
-	
-	
-	
 }
+
+
